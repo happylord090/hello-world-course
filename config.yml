@@ -1,0 +1,18 @@
+title: hello-world
+description: >-
+  this is my first repository, glad to try out this platform. best thing about
+  it is that its free so far.
+template:
+  repo: hello-world-template
+  name: hello-world
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
